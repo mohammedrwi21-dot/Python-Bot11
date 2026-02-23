@@ -3,9 +3,8 @@ import datetime
 import os
 
 # ========= إعدادات =========
-
-TELEGRAM_BOT_TOKEN = "8662332213:AAEQ2p3cP7RMHsZC8_RvXTOuCdVbUmRpoMk"
-TELEGRAM_CHAT_ID = "@MySeriesAlerts"
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 STATE_FILE = "sent_today.txt"
 
@@ -80,4 +79,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
